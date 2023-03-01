@@ -1,778 +1,801 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt_BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>ExperConsult</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="styleHome.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="../Projeto/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../Projeto/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../Projeto/favicon/favicon-16x16.png">
-        <link rel="manifest" href="../Projeto/favicon/site.webmanifest">
+    <title>ExperConsult</title>
 
-        <style>
-            .swiper {
-              width: 70%;
-              height: 100%;
-              padding-top: 60px;
-            }
-        
-            .swiper-slide {
-              text-align: center;
-              font-size: 18px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-        
-            .swiper-slide img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Projeto/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Projeto/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Projeto/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../Projeto/favicon/site.webmanifest">
 
-            .mySwiper .swiper-slide {
-                opacity: 1 !important;
-            }
+    <style>
+        .swiper {
+            width: 70%;
+            height: 100%;
+            padding-top: 60px;
+        }
 
-            .boxClientes {
-                height: 100px !important;
-                width: 150px !important;
-            }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mySwiper .swiper-slide {
+            opacity: 1 !important;
+        }
+
+        .boxClientes {
+            height: 100px !important;
+            width: 150px !important;
+        }
+
+        .swiper-button-prev {
+            color: #bdd73c;
+            padding-left: 10%;
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        .swiper-button-next {
+            color: #bdd73c;
+            padding-right: 10%;
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
             .swiper-button-prev {
-              color: #bdd73c;
-              padding-left: 10%;
-              margin-top: 20px;
-              z-index: 1;
+                padding-left: 0px;
             }
 
             .swiper-button-next {
-                color: #bdd73c;
-                padding-right: 10%;
-                margin-top: 20px;
-                z-index: 1;
+                padding-right: 0px;
             }
 
-            @media (max-width: 600px) {
-                .swiper-button-prev {
-                    padding-left: 0px;
-                }
-
-                .swiper-button-next {
-                    padding-right: 0px;
-                }
-
-                .swiper {
-                    padding-top: 20px;
-                }
+            .swiper {
+                padding-top: 20px;
             }
-          </style>
-    </head>
-    
-    <body>
+        }
+    </style>
+</head>
 
-        <header>
-            <nav>
-                <div id="header">
+<body>
 
-                    <div class="imgHeader">
-                        <a href="index.html"><img src="../Projeto/imagens/ExperNavbar.png" class="logoHeader"></a>
-                    </div>
-                
-                    <div class="icons-menu" id="icons-menu">
-                        <button id="close" class="button-image">
-                            <img src="../Projeto/imagens/close.png" class="fechaMenu">
-                        </button>
+    <header>
+        <nav>
+            <div id="header">
 
-                        <button id="hamburguer" class="button-image">
-                            <img src="../Projeto/imagens/hamburger.png" class="abreMenu">
-                        </button>
-
-                        <ul class="itensHeader">
-                            <li><a href="index.html" class="letrasMenu">Home</a></li>
-                            <li class="dropdownMenu">
-                                <a href="" class="letrasMenu">Soluções</a>
-                                <ul class="dropDown">
-                                    <li><a href="engenharia.html" class="letrasMenu dropDown"> • Engenharia</a></li>
-                                    <li><a href="planejamento.html" class="letrasMenu dropDown"> • Planejamento</a></li>
-                                    <li><a href="assessoria.html" class="letrasMenu dropDown"> • Assessoria</a></li>
-                                </ul>    
-                            </li>
-                            <li><a href="sobreNos.html" class="letrasMenu">Sobre nós</a></li>
-                            <li><a href="clientes.html" class="letrasMenu">Clientes</a></li>
-                            <li><a href="cases.html" class="letrasMenu">Cases</a></li>
-                            <li><a href="contatos.html" class="letrasMenu">Contato</a></li>
-                        </ul>
-                    </div>               
+                <div class="imgHeader">
+                    <a href="index.html"><img src="../Projeto/imagens/ExperNavbar.png" class="logoHeader"></a>
                 </div>
-            </nav>  
-        </header>
 
-        <main>
-            <div class="sectionMain">
-                <img src="../Projeto/imagens/Home.png" class="imageHome">
+                <div class="icons-menu" id="icons-menu">
+                    <button id="close" class="button-image">
+                        <img src="../Projeto/imagens/close.png" class="fechaMenu">
+                    </button>
 
-                <div class="contentMain">
-                    <h1 class="titlePresentation">Excelência em Planejamento<br> e Consultoria</h1>
+                    <button id="hamburguer" class="button-image">
+                        <img src="../Projeto/imagens/hamburger.png" class="abreMenu">
+                    </button>
 
-                    <h3 class="contentPresentation">A <b>Exper Consult </b>opera com amplo mix de soluções na<br> busca de resultados rápidos e de qualidade.<br> 
-                         Especializados na estruturação estratégica, na<br> construção e operação de plantas industriais,
-                          somos<br> destaque na projeção de indústrias do ramo alimentício.</h3>
-                </div>
-            </div>  
-
-            <div class="sectionSolucoes">
-                <div><h1 class="titleSection">Conheça nossas <span class="mainColor">soluções</span></h1></div>
-
-                <div class="contentSolucoes">
-
-                    <div class="cardBoxSolucoes">
-
-                        <div class="cardBoxContent">
-                            <img src="../Projeto/imagens/Retângulo 15.png" class="imagemCardBox">
-                        <h2 class="titleCardBox">Engenharia</h2>
-                        <h3 class="textoCardBox">Elaboração dos projetos arquitetônicos, estruturais e complementares. Realizando a integração de todas as disciplinas com a compatibilização de projetos gerando a melhor solução com menor custo..</h3>
-                        </div>
-                        
-                        <div class="cardBoxbutton">
-                            <button class="buttonCardBox"><a href="engenharia.html" class="buttonCardBox">+ Saiba mais</a></button>
-                        </div> 
-
-                    </div>
-
-                    <div class="cardBoxSolucoes">
-
-                        <div class="cardBoxContent">
-                            <img src="../Projeto/imagens/Retângulo 16.png" class="imagemCardBox">
-                        <h2 class="titleCardBox">Planejamento</h2>
-                        <h3 class="textoCardBox">Estratégias inteligentes, validação e otimização de processos e caminhos,
-                            visando pontos mercadológicos, técnicos, financeiros, jurídicos e organizacionais.</h3>
-                        </div>
-                        
-                        <div class="cardBoxbutton">
-                            <button class="buttonCardBox"><a href="planejamento.html" class="buttonCardBox">+ Saiba mais</a></button>
-                        </div>  
-
-                    </div>
-
-                    <div class="cardBoxSolucoes">
-
-                        <div class="cardBoxContent">
-                            <img src="../Projeto/imagens/Retângulo 17.png" class="imagemCardBox">
-                        <h2 class="titleCardBox">Assessoria</h2>
-                        <h3 class="textoCardBox">Gerenciamento, prevenção, programas e treinamentos que potencializam e ampliam as melhorias aplicadas aos projetos e processos, visando a busca de excelência plena em todos os aspectos.</h3>
-                        </div>
-                        
-                        <div class="cardBoxbutton">
-                            <button class="buttonCardBox"><a href="assessoria.html" class="buttonCardBox">+ Saiba mais</a></button>
-                        </div> 
-
-                    </div>                  
+                    <ul class="itensHeader">
+                        <li><a href="index.html" class="letrasMenu">Home</a></li>
+                        <li class="dropdownMenu">
+                            <a href="" class="letrasMenu">Soluções</a>
+                            <ul class="dropDown">
+                                <li><a href="engenharia.html" class="letrasMenu dropDown"> • Engenharia</a></li>
+                                <li><a href="planejamento.html" class="letrasMenu dropDown"> • Planejamento</a></li>
+                                <li><a href="assessoria.html" class="letrasMenu dropDown"> • Assessoria</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sobreNos.html" class="letrasMenu">Sobre nós</a></li>
+                        <li><a href="clientes.html" class="letrasMenu">Clientes</a></li>
+                        <li><a href="cases.html" class="letrasMenu">Cases</a></li>
+                        <li><a href="contatos.html" class="letrasMenu">Contato</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="sectionClientes">
-                <h1 class="titleSection">Nossos <span class="mainColor">Clientes</span></h1>
+    <main>
+        <div class="sectionMain">
+            <img src="../Projeto/imagens/Home.png" class="imageHome">
 
-                <!--<div class="cardChart">
+            <div class="contentMain">
+                <h1 class="titlePresentation">Excelência em Planejamento<br> e Consultoria</h1>
+
+                <h3 class="contentPresentation">A <b>Exper Consult </b>opera com amplo mix de soluções na<br> busca de
+                    resultados rápidos e de qualidade.<br>
+                    Especializados na estruturação estratégica, na<br> construção e operação de plantas industriais,
+                    somos<br> destaque na projeção de indústrias do ramo alimentício.</h3>
+            </div>
+        </div>
+
+        <div class="sectionSolucoes">
+            <div>
+                <h1 class="titleSection">Conheça nossas <span class="mainColor">soluções</span></h1>
+            </div>
+
+            <div class="contentSolucoes">
+
+                <div class="cardBoxSolucoes">
+
+                    <div class="cardBoxContent">
+                        <img src="../Projeto/imagens/Retângulo 15.png" class="imagemCardBox">
+                        <h2 class="titleCardBox">Engenharia</h2>
+                        <h3 class="textoCardBox">Elaboração dos projetos arquitetônicos, estruturais e complementares.
+                            Realizando a integração de todas as disciplinas com a compatibilização de projetos gerando a
+                            melhor solução com menor custo..</h3>
+                    </div>
+
+                    <div class="cardBoxbutton">
+                        <button class="buttonCardBox"><a href="engenharia.html" class="buttonCardBox">+ Saiba
+                                mais</a></button>
+                    </div>
+
+                </div>
+
+                <div class="cardBoxSolucoes">
+
+                    <div class="cardBoxContent">
+                        <img src="../Projeto/imagens/Retângulo 16.png" class="imagemCardBox">
+                        <h2 class="titleCardBox">Planejamento</h2>
+                        <h3 class="textoCardBox">Estratégias inteligentes, validação e otimização de processos e
+                            caminhos,
+                            visando pontos mercadológicos, técnicos, financeiros, jurídicos e organizacionais.</h3>
+                    </div>
+
+                    <div class="cardBoxbutton">
+                        <button class="buttonCardBox"><a href="planejamento.html" class="buttonCardBox">+ Saiba
+                                mais</a></button>
+                    </div>
+
+                </div>
+
+                <div class="cardBoxSolucoes">
+
+                    <div class="cardBoxContent">
+                        <img src="../Projeto/imagens/Retângulo 17.png" class="imagemCardBox">
+                        <h2 class="titleCardBox">Assessoria</h2>
+                        <h3 class="textoCardBox">Gerenciamento, prevenção, programas e treinamentos que potencializam e
+                            ampliam as melhorias aplicadas aos projetos e processos, visando a busca de excelência plena
+                            em todos os aspectos.</h3>
+                    </div>
+
+                    <div class="cardBoxbutton">
+                        <button class="buttonCardBox"><a href="assessoria.html" class="buttonCardBox">+ Saiba
+                                mais</a></button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionClientes">
+            <h1 class="titleSection">Nossos <span class="mainColor">Clientes</span></h1>
+
+            <!--<div class="cardChart">
                     <div id="imageContainer"></div>
                 </div>    
                 <div class="owl-carousel">
                 </div> -->
 
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper" style="opacity: 1 !important;">
-                        <div class="boxClientes swiper-slide"> 
-                            <img src="../Projeto/imagensClientes/adorar.png">
-                         </div>
-                             
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/agraria.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/Agrolusa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/alfa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/alimenti.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/AllesAlimentos.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/angeloni.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/aryzta.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/atalaia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/ave-nova.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/avenorte.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bahamas.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/barramansa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/begreen.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bergamini.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bestbeef.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bigbeef.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bistek.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/boibras.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bomdia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bonasa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/borussia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/brasa.png">
-                         </div>
-                         
-                         <div class="boxClientes">
-                             <img src="../Projeto/imagensClientes/Brazilian_Flag_-_round.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/brios.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/bullight.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/callegaro.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/carapreta.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/castilhos.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cedrofrigor.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cencosud.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/ciacarne.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cialne.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/coamig.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cofril.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cogran.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/congebras.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cooperalianca.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/cooperfrigu.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/csb.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/dia-dia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/dia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/distriboi.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/dudico.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/ecofrigo.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/esper.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/extrabom.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/festval.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/forteboi.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/fortefrigo.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/fratte.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/friato.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frico.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/fricon.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/friganso.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigobet.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigomatoso.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigominas.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigorifico-real.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigosuino.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigotins.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frigovitta.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frijob.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/friuna.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/frizelo.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/gessner.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/giassi.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/goncalves.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/gpa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/grancampero.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/handtmann.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/hortisul.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/imperio.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/kiboi.png">
-                         </div>
-                         
-                         <div class="boxClientes">
-                             <img src="../Projeto/imagensClientes/korin.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/landim.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/lopes.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/lpx.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/mafrinorte.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/maguary.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/maisa.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/marfrig.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/mateus.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/mellore.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/moreira.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/muffato.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/nordestao.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/notable.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/nutribelo.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/nutrien.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/padrao-beef.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/paguemenos.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/pao-arte.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/parman.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/perim.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/pravitta.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/primecater.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/q.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/raja.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/resplendor.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/rey.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/reyna.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/riomaria.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/rivelli.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/saborvida.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/santa-clara.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/sao-joao-del-rey.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/saudali.png">
-                         </div>
-                       
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/sonda.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/ssa.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/starmilk.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/super-maia.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/super-maxi.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/supernosso.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/tijuca.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/trigo-arte-e-cia.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/trimais.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/uai.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/unidasul.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/verdemar.png">
-                         </div>
-                         
-                         <div class="boxClientes">
-                             <img src="../Projeto/imagensClientes/verona.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/vila-caipira.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/vpj.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/yoguedes.png">
-                         </div>
-                        
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/zaffari.png">
-                         </div>
-                         
-                         <div class="boxClientes swiper-slide">
-                             <img src="../Projeto/imagensClientes/zona sul.png">
-                         </div>
-                     </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" style="opacity: 1 !important;">
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/adorar.png">
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
 
-        </main>
-
-        <footer>           
-            <div class="backgroundFooter">
-
-                <div class="contentFooter">
-
-                    <div class="informacoesContato">
-                        <h1 class="contatoFooter">Entre em contato</h1>
-                        <div class="contato">
-                            <img src="../Projeto/imagens/phone-solid.png" class="iconeContatos">
-                            <H1 class="infomacoes"><a href="tel:(31) 3534-4699" class="whiteColor">(31) 3534-4699</a></H1>
-                        </div>
-                                    
-                        <div class="contato">
-                            <img src="../Projeto/imagens/instagram.png" class="iconeContatos">
-                            <H1 class="infomacoes"><a href="https://www.instagram.com/experconsult/" class="whiteColor">experconsult</a></H1>
-                        </div>
-                                      
-                        <div class="contato">
-                            <img src="../Projeto/imagens/linkedin.png" class="iconeContatos">
-                            <H1 class="infomacoes"><a href="https://www.linkedin.com/company/exper-consult-ltda/?originalSubdomain=br" class="whiteColor">exper-consult</a></H1>
-                        </div>
-                        
-                        <div class="contato">
-                            <img src="../Projeto/imagens/envelope-solid.png" class="iconeContatos">
-                            <H1 class="infomacoes"><a href="mailto:exper@experconsult.com.br" class="whiteColor">exper@experconsult.com.br</a></H1>
-                        </div>
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/agraria.png">
                     </div>
-                    
-                    <div class="informacoesContato">
-                        <h1 class="contatoFooter">Como Chegar</h1>
-                        <iframe class="gps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7494.975692875168!2d-44.3083464!3d-20.0718838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6d1107c2a0baf%3A0x8eac756a1ea35db!2sExper%20Consult%20-%20Engenharia%20Especializada!5e0!3m2!1spt-BR!2sbr!4v1675550897160!5m2!1spt-BR!2sbr" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/Agrolusa.png">
                     </div>
-    
-                    <div class="logoFooter">
-                        <img src="../Projeto/imagens/Logo Exper Consult (Branco).png" alt="" class="imgFooter">
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/alfa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/alimenti.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/AllesAlimentos.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/angeloni.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/aryzta.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/atalaia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/ave-nova.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/avenorte.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bahamas.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/barramansa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/begreen.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bergamini.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bestbeef.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bigbeef.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bistek.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/boibras.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bomdia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bonasa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/borussia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/brasa.png">
+                    </div>
+
+                    <div class="boxClientes">
+                        <img src="../Projeto/imagensClientes/Brazilian_Flag_-_round.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/brios.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/bullight.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/callegaro.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/carapreta.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/castilhos.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cedrofrigor.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cencosud.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/ciacarne.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cialne.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/coamig.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cofril.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cogran.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/congebras.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cooperalianca.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/cooperfrigu.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/csb.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/dia-dia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/dia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/distriboi.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/dudico.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/ecofrigo.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/esper.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/extrabom.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/festval.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/forteboi.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/fortefrigo.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/fratte.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/friato.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frico.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/fricon.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/friganso.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigobet.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigomatoso.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigominas.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigorifico-real.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigosuino.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigotins.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frigovitta.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frijob.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/friuna.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/frizelo.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/gessner.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/giassi.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/goncalves.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/gpa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/grancampero.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/handtmann.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/hortisul.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/imperio.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/kiboi.png">
+                    </div>
+
+                    <div class="boxClientes">
+                        <img src="../Projeto/imagensClientes/korin.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/landim.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/lopes.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/lpx.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/mafrinorte.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/maguary.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/maisa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/marfrig.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/mateus.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/mellore.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/moreira.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/muffato.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/nordestao.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/notable.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/nutribelo.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/nutrien.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/padrao-beef.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/paguemenos.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/pao-arte.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/parman.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/perim.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/pravitta.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/primecater.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/q.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/raja.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/resplendor.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/rey.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/reyna.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/riomaria.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/rivelli.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/saborvida.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/santa-clara.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/sao-joao-del-rey.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/saudali.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/sonda.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/ssa.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/starmilk.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/super-maia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/super-maxi.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/supernosso.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/tijuca.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/trigo-arte-e-cia.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/trimais.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/uai.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/unidasul.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/verdemar.png">
+                    </div>
+
+                    <div class="boxClientes">
+                        <img src="../Projeto/imagensClientes/verona.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/vila-caipira.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/vpj.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/yoguedes.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/zaffari.png">
+                    </div>
+
+                    <div class="boxClientes swiper-slide">
+                        <img src="../Projeto/imagensClientes/zona sul.png">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="backgroundFooter">
+
+            <div class="contentFooter">
+
+                <div class="informacoesContato">
+                    <h1 class="contatoFooter">Entre em contato</h1>
+                    <div class="contato">
+                        <img src="../Projeto/imagens/phone-solid.png" class="iconeContatos">
+                        <H1 class="infomacoes"><a href="tel:(31) 3534-4699" class="whiteColor">(31) 3534-4699</a></H1>
+                    </div>
+
+                    <div class="contato">
+                        <img src="../Projeto/imagens/instagram.png" class="iconeContatos">
+                        <H1 class="infomacoes"><a href="https://www.instagram.com/experconsult/"
+                                class="whiteColor">experconsult</a></H1>
+                    </div>
+
+                    <div class="contato">
+                        <img src="../Projeto/imagens/linkedin.png" class="iconeContatos">
+                        <H1 class="infomacoes"><a
+                                href="https://www.linkedin.com/company/exper-consult-ltda/?originalSubdomain=br"
+                                class="whiteColor">exper-consult</a></H1>
+                    </div>
+
+                    <div class="contato">
+                        <img src="../Projeto/imagens/envelope-solid.png" class="iconeContatos">
+                        <H1 class="infomacoes"><a href="mailto:exper@experconsult.com.br"
+                                class="whiteColor">exper@experconsult.com.br</a></H1>
                     </div>
                 </div>
 
-                <span class="direitos">© 2023 Exper Consult | Engenharia, Planejamento e Consultoria. Todos os direitos reservados</span>
+                <div class="informacoesContato">
+                    <h1 class="contatoFooter">Como Chegar</h1>
+                    <iframe class="gps"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7494.975692875168!2d-44.3083464!3d-20.0718838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6d1107c2a0baf%3A0x8eac756a1ea35db!2sExper%20Consult%20-%20Engenharia%20Especializada!5e0!3m2!1spt-BR!2sbr!4v1675550897160!5m2!1spt-BR!2sbr"
+                        width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-            </div>        
-        </footer>
+                <div class="logoFooter">
+                    <img src="../Projeto/imagens/Logo Exper Consult (Branco).png" alt="" class="imgFooter">
+                </div>
+            </div>
 
-        <script src="javaScript.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-              breakpoints: {
+            <span class="direitos">© 2023 Exper Consult | Engenharia, Planejamento e Consultoria. Todos os direitos
+                reservados</span>
+
+        </div>
+    </footer>
+
+    <script src="javaScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
                 640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
+                    slidesPerView: 2,
+                    spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 4,
-                  spaceBetween: 40,
+                    slidesPerView: 4,
+                    spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 5,
-                  spaceBetween: 50,
+                    slidesPerView: 5,
+                    spaceBetween: 50,
                 },
-              },
-            });
-          </script>
+            },
+        });
+    </script>
+
 </html>
