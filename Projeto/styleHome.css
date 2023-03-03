@@ -1279,6 +1279,8 @@ button {
 
 .owl-carousel .owl-item img {
     height: 400px;
+    border-radius: 2%;
+    object-fit: cover;
 }
 
 .titleClientesCases {
@@ -1356,6 +1358,10 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
+}
+
+.clientesBovinos img {
+    border-radius: 10%;
 }
 
 .desossaImg {
