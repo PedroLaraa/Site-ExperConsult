@@ -35,6 +35,7 @@ button {
 
 .logoHeader {
     margin-left: 5.5rem;
+    width: 12rem;
 }
 
 .itensHeader {
@@ -46,12 +47,23 @@ button {
 .letrasMenu {
     font-weight: 500;
     font-family: 'Lato', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: #bdd73c;
 }
 
 .letrasMenu:hover {
     color: white;
+}
+
+.areaCliente {
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.areaCliente:hover {
+    color: #bdd73c;
 }
 
 .icons-menu.on {
@@ -123,6 +135,15 @@ button {
     margin-top: 2rem;
 }
 
+@media (max-width: 1350px) { 
+
+    .logoHeader {
+        margin-left: 2.2rem;
+    }
+
+}
+
+
 @media (min-width: 1000.99px) {
     #hamburguer {
         display: none;
@@ -143,8 +164,20 @@ button {
 
 }
 
+@media (max-width: 1075px) { 
+
+    .logoHeader {
+        margin-left: auto;
+    }
+
+}
+
 
 @media (max-width: 1000px) {
+
+    .logoHeader {
+        margin-left: 3rem;
+    }
 
     .icons-menu.on body {
         overflow: hidden;
@@ -163,7 +196,7 @@ button {
         margin-right: 0;
     }
 
-    .icons-menu.on .letrasMenu:hover {
+    .icons-menu.on .letrasMenu:hover{
         color: #ffffff;
     }
 
@@ -171,10 +204,10 @@ button {
         margin-left: 1rem;
     }
 
-    .icons-menu.on .letrasMenu {
+    .icons-menu.on .letrasMenu .areaCliente {
         font-weight: bold;
         font-family: 'Lato', sans-serif;
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: #bdd73c;
     }
 }
