@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;   
+}
+
+button {
+    border: none;
+}
+
+/* MENU */
+
+#header {
+    display: flex;
+    width: 100%;
+    background-color: #707070;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 6.7rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.logoHeader {
+    margin-left: 5.5rem;
+}
+
+.itensHeader {
+    display: flex;   
+    gap: 3.75rem;
+    margin-right: 8.125rem;
+}
+
+.letrasMenu {
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    color: #bdd73c;
+}
+
+.letrasMenu:hover {
+    color: white;
+}
+
+.icons-menu.on{
+    position: fixed;
+    background-color: #707070;
+    width: unset;
+    height: unset;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    z-index: 2;
+    padding: 30px;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.button-image:hover{
+    background-color: transparent;
+}
+
+.icons-menu.on #hamburguer{
+    display: none;
+}
+
+#hamburguer{      
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    height: 100px;
+}
+
+.abreMenu {
+    height: 80px;
+}
+
+.icons-menu.on #close{
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 0%;
+    width: 50px;
+    height: 100px !important;
+}
+
+.fechaMenu {
+    height: 30px;
+}
+
+.button-image{
+    background: transparent;
+    border: 0;
+    line-height: 0;
+}
+
+#close{
+    display: none;
+}
+
+.icons-menu.on #lista{
+    height: 100vh;
+}
+
+.icons-menu.on ul{
+    display: flex;   
+    flex-direction: column; 
+    text-align: center; 
+    justify-content: center;
+    gap: 1.875rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 1000.99px) {
+    #hamburguer {
+        display: none;
+    }
+}
+
+@media (max-width: 1270px) {
+
+    .logoHeader {
+        margin-left: 3rem;
+    }
+
+    .itensHeader {
+        display: flex;   
+        gap: 2.5rem;
+        margin-right: 2rem;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .icons-menu.on body {
+        overflow: hidden;
+    }
+
+    .itensHeader {
+        display: none;
+    }
+
+    .icons-menu.on .itensHeader {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 3rem;   
+        gap: 1rem;
+        margin-right: 0;
+    }
+
+    .icons-menu.on .letrasMenu:hover {
+        color: #ffffff;
+    }
+
+    .logoHeader {
+        margin-left: 1rem;
+    }
+
+    .icons-menu.on .letrasMenu {
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        color: #bdd73c;
+    }
+}
+
+@media (max-width: 1000px) {
+    .abreMenu {
+        height: 60px;
+    }
+}
